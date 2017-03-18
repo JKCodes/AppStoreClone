@@ -10,9 +10,36 @@ import UIKit
 
 class AppCell: BaseCell {
     
+    var nameLabelHeightConstaint: NSLayoutConstraint?
+    
+    var app: App? {
+        didSet {
+            if let name = app?.name {
+                nameLabel.text = name
+                
+                let rect = NSString(string: name).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14)], context: nil)
+                let multiplier: CGFloat = rect.height < 20 ? 1 : 2
+                
+                nameLabelHeightConstaint?.isActive = false
+                nameLabelHeightConstaint = nameLabel.heightAnchor.constraint(equalToConstant: 20 * multiplier)
+                nameLabelHeightConstaint?.isActive = true
+            }
+            
+            categoryLabel.text = app?.category
+            
+            if let price = app?.price {
+                priceLabel.text = "$\(price)"
+            } else {
+                priceLabel.text = ""
+            }
+            if let imageName = app?.imageName {
+                imageView.image = UIImage(named: imageName)
+            }
+        }
+    }
+    
     let imageView: UIImageView = {
        let iv = UIImageView()
-        iv.image = UIImage(named: "frozen")
         iv.contentMode = .scaleAspectFill
         iv.layer.cornerRadius = 16
         iv.layer.masksToBounds = true
@@ -50,7 +77,7 @@ class AppCell: BaseCell {
         addSubview(priceLabel)
         
         imageView.anchor(top: topAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: frame.width, heightConstant: frame.width)
-        nameLabel.anchor(top: imageView.bottomAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: frame.width, heightConstant: 40)
+        nameLabelHeightConstaint = nameLabel.anchorAndReturn(top: imageView.bottomAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: frame.width, heightConstant: 40)[3]
         categoryLabel.anchor(top: nameLabel.bottomAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: -2, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: frame.width, heightConstant: 20)
         priceLabel.anchor(top: categoryLabel.bottomAnchor, left: leftAnchor, bottom: nil, right: nil, topConstant: -2, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: frame.width, heightConstant: 20)
     }

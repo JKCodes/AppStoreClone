@@ -17,6 +17,14 @@ class CategoryCell: BaseCell, UICollectionViewDelegate, UICollectionViewDataSour
     private let cellWidth: CGFloat = 100.0
     private var cellHeight: CGFloat = 0.0
     
+    var category: Category? {
+        didSet {
+            if let name = category?.name {
+                nameLabel.text = name
+            }
+        }
+    }
+    
     
     let nameLabel: UILabel = {
         let label = UILabel()
@@ -75,11 +83,16 @@ class CategoryCell: BaseCell, UICollectionViewDelegate, UICollectionViewDataSour
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        if let count = category?.apps?.count {
+            return count
+        }
+        
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! AppCell
+        cell.app = category?.apps?[indexPath.item]
         
         return cell
     }

@@ -12,6 +12,14 @@ extension UIView {
     func anchor(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, topConstant: CGFloat = 0, leftConstant: CGFloat = 0, bottomConstant: CGFloat = 0, rightConstant: CGFloat = 0, widthConstant: CGFloat = 0, heightConstant: CGFloat = 0) {
         translatesAutoresizingMaskIntoConstraints = false
         
+        let _ = anchorAndReturn(top: top, left: left, bottom: bottom, right: right, topConstant: topConstant, leftConstant: leftConstant, bottomConstant: bottomConstant, rightConstant: rightConstant, widthConstant: widthConstant, heightConstant: heightConstant)
+        
+        
+    }
+    
+    func anchorAndReturn(top: NSLayoutYAxisAnchor? = nil, left: NSLayoutXAxisAnchor? = nil, bottom: NSLayoutYAxisAnchor? = nil, right: NSLayoutXAxisAnchor? = nil, topConstant: CGFloat = 0, leftConstant: CGFloat = 0, bottomConstant: CGFloat = 0, rightConstant: CGFloat = 0, widthConstant: CGFloat = 0, heightConstant: CGFloat = 0) -> [NSLayoutConstraint] {
+        translatesAutoresizingMaskIntoConstraints = false
+        
         var anchors = [NSLayoutConstraint]()
         
         if let top = top {
@@ -39,6 +47,8 @@ extension UIView {
         }
         
         anchors.forEach({$0.isActive = true})
+        
+        return anchors
     }
     
     func fillSuperview() {
