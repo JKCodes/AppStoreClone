@@ -12,8 +12,8 @@ class CategoryCell: BaseCell, UICollectionViewDelegate, UICollectionViewDataSour
 
     private let cellId = "appCell"
     private let contentOffset: CGFloat = 14.0
-    private let dividerHeight: CGFloat = 0.5
-    private let nameLabelHeight: CGFloat = 30.0
+    internal let dividerHeight: CGFloat = 0.5
+    internal let nameLabelHeight: CGFloat = 30.0
     private let cellWidth: CGFloat = 100.0
     private var cellHeight: CGFloat = 0.0
     
@@ -22,6 +22,8 @@ class CategoryCell: BaseCell, UICollectionViewDelegate, UICollectionViewDataSour
             if let name = category?.name {
                 nameLabel.text = name
             }
+            
+            appsCollectionView.reloadData()
         }
     }
     
@@ -99,6 +101,7 @@ class CategoryCell: BaseCell, UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         cellHeight = frame.height - nameLabelHeight - dividerHeight
+        
         return CGSize(width: cellWidth, height: cellHeight)
     }
     

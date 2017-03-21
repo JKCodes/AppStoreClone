@@ -17,6 +17,11 @@
 		D841CA691E7DA5E2007708F8 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841CA681E7DA5E2007708F8 /* AppCell.swift */; };
 		D841CA6B1E7DB44B007708F8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841CA6A1E7DB44B007708F8 /* Category.swift */; };
 		D841CA6D1E7DB469007708F8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841CA6C1E7DB469007708F8 /* App.swift */; };
+		D8FB022E1E814D6700825809 /* LargeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB022D1E814D6700825809 /* LargeCategoryCell.swift */; };
+		D8FB02301E81558D00825809 /* LargeAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB022F1E81558D00825809 /* LargeAppCell.swift */; };
+		D8FB02321E815BF100825809 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB02311E815BF100825809 /* Header.swift */; };
+		D8FB02341E815DC200825809 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB02331E815DC200825809 /* BannerCell.swift */; };
+		D8FB02361E81605A00825809 /* FeaturedApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB02351E81605A00825809 /* FeaturedApps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		D841CA681E7DA5E2007708F8 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
 		D841CA6A1E7DB44B007708F8 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D841CA6C1E7DB469007708F8 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D8FB022D1E814D6700825809 /* LargeCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeCategoryCell.swift; sourceTree = "<group>"; };
+		D8FB022F1E81558D00825809 /* LargeAppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeAppCell.swift; sourceTree = "<group>"; };
+		D8FB02311E815BF100825809 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		D8FB02331E815DC200825809 /* BannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
+		D8FB02351E81605A00825809 /* FeaturedApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedApps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,9 +97,13 @@
 		D841CA631E7D917D007708F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D841CA681E7DA5E2007708F8 /* AppCell.swift */,
 				D841CA5F1E7D90DA007708F8 /* BaseCell.swift */,
 				D841CA5D1E7D90A1007708F8 /* CategoryCell.swift */,
-				D841CA681E7DA5E2007708F8 /* AppCell.swift */,
+				D8FB022F1E81558D00825809 /* LargeAppCell.swift */,
+				D8FB022D1E814D6700825809 /* LargeCategoryCell.swift */,
+				D8FB02311E815BF100825809 /* Header.swift */,
+				D8FB02331E815DC200825809 /* BannerCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -99,6 +113,7 @@
 			children = (
 				D841CA6A1E7DB44B007708F8 /* Category.swift */,
 				D841CA6C1E7DB469007708F8 /* App.swift */,
+				D8FB02351E81605A00825809 /* FeaturedApps.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -186,11 +201,16 @@
 				D841CA671E7D9BD8007708F8 /* UIView + Anchors.swift in Sources */,
 				D841CA601E7D90DA007708F8 /* BaseCell.swift in Sources */,
 				D841CA4E1E7D8E4C007708F8 /* FeaturedAppsController.swift in Sources */,
+				D8FB02361E81605A00825809 /* FeaturedApps.swift in Sources */,
 				D841CA691E7DA5E2007708F8 /* AppCell.swift in Sources */,
 				D841CA4C1E7D8E4C007708F8 /* AppDelegate.swift in Sources */,
+				D8FB02341E815DC200825809 /* BannerCell.swift in Sources */,
+				D8FB02321E815BF100825809 /* Header.swift in Sources */,
+				D8FB022E1E814D6700825809 /* LargeCategoryCell.swift in Sources */,
 				D841CA6D1E7DB469007708F8 /* App.swift in Sources */,
 				D841CA5E1E7D90A1007708F8 /* CategoryCell.swift in Sources */,
 				D841CA6B1E7DB44B007708F8 /* Category.swift in Sources */,
+				D8FB02301E81558D00825809 /* LargeAppCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

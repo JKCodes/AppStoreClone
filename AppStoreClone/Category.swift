@@ -28,7 +28,7 @@ class Category: NSObject {
         }
     }
     
-    static func fetchFeaturedApps(completionHandler: @escaping ([Category]) -> ()) {
+    static func fetchFeaturedApps(completionHandler: @escaping (FeaturedApps) -> ()) {
         let urlString = "http://www.statsallday.com/appstore/featured"
         guard let url = URL(string: urlString) else {
             return
@@ -45,16 +45,11 @@ class Category: NSObject {
                 if let data = data {
                     let json = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! [String: AnyObject]
                     
-                    var categories = [Category]()
-                    
-                    for dict in json["categories"] as! [[String: AnyObject]] {
-                        let category = Category()
-                        category.setValuesForKeys(dict)
-                        categories.append(category)
-                    }
+                    let featuredApps = FeaturedApps()
+                    featuredApps.setValuesForKeys(json)
                     
                     DispatchQueue.main.async {
-                        completionHandler(categories)
+                        completionHandler(featuredApps)
                     }
                 }
             } catch let err {

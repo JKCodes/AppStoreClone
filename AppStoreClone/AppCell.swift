@@ -20,9 +20,7 @@ class AppCell: BaseCell {
                 let rect = NSString(string: name).boundingRect(with: CGSize(width: frame.width, height: 1000), options: NSStringDrawingOptions.usesFontLeading.union(.usesLineFragmentOrigin), attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14)], context: nil)
                 let multiplier: CGFloat = rect.height < 20 ? 1 : 2
                 
-                nameLabelHeightConstaint?.isActive = false
-                nameLabelHeightConstaint = nameLabel.heightAnchor.constraint(equalToConstant: 20 * multiplier)
-                nameLabelHeightConstaint?.isActive = true
+                nameLabelHeightConstaint?.constant = 20 * multiplier
             }
             
             categoryLabel.text = app?.category
