@@ -17,6 +17,9 @@
 		D841CA691E7DA5E2007708F8 /* AppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841CA681E7DA5E2007708F8 /* AppCell.swift */; };
 		D841CA6B1E7DB44B007708F8 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841CA6A1E7DB44B007708F8 /* Category.swift */; };
 		D841CA6D1E7DB469007708F8 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D841CA6C1E7DB469007708F8 /* App.swift */; };
+		D8C7DDE81E81798400061329 /* ScreenshotsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7DDE71E81798400061329 /* ScreenshotsCell.swift */; };
+		D8C7DDEA1E817B5100061329 /* ScreenshotImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7DDE91E817B5100061329 /* ScreenshotImageCell.swift */; };
+		D8C7DDEC1E81876200061329 /* AppDetailDescriptionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C7DDEB1E81876200061329 /* AppDetailDescriptionCell.swift */; };
 		D8FB022E1E814D6700825809 /* LargeCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB022D1E814D6700825809 /* LargeCategoryCell.swift */; };
 		D8FB02301E81558D00825809 /* LargeAppCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB022F1E81558D00825809 /* LargeAppCell.swift */; };
 		D8FB02321E815BF100825809 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB02311E815BF100825809 /* Header.swift */; };
@@ -39,6 +42,9 @@
 		D841CA681E7DA5E2007708F8 /* AppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppCell.swift; sourceTree = "<group>"; };
 		D841CA6A1E7DB44B007708F8 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		D841CA6C1E7DB469007708F8 /* App.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>"; };
+		D8C7DDE71E81798400061329 /* ScreenshotsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotsCell.swift; sourceTree = "<group>"; };
+		D8C7DDE91E817B5100061329 /* ScreenshotImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScreenshotImageCell.swift; sourceTree = "<group>"; };
+		D8C7DDEB1E81876200061329 /* AppDetailDescriptionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailDescriptionCell.swift; sourceTree = "<group>"; };
 		D8FB022D1E814D6700825809 /* LargeCategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeCategoryCell.swift; sourceTree = "<group>"; };
 		D8FB022F1E81558D00825809 /* LargeAppCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LargeAppCell.swift; sourceTree = "<group>"; };
 		D8FB02311E815BF100825809 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
@@ -144,6 +150,9 @@
 			isa = PBXGroup;
 			children = (
 				D8FB023B1E8168FF00825809 /* AppDetailHeader.swift */,
+				D8C7DDE71E81798400061329 /* ScreenshotsCell.swift */,
+				D8C7DDE91E817B5100061329 /* ScreenshotImageCell.swift */,
+				D8C7DDEB1E81876200061329 /* AppDetailDescriptionCell.swift */,
 			);
 			name = "App Detail";
 			sourceTree = "<group>";
@@ -221,6 +230,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D8FB02381E8167B100825809 /* AppDetailController.swift in Sources */,
+				D8C7DDEC1E81876200061329 /* AppDetailDescriptionCell.swift in Sources */,
+				D8C7DDE81E81798400061329 /* ScreenshotsCell.swift in Sources */,
 				D841CA671E7D9BD8007708F8 /* UIView + Anchors.swift in Sources */,
 				D841CA601E7D90DA007708F8 /* BaseCell.swift in Sources */,
 				D841CA4E1E7D8E4C007708F8 /* FeaturedAppsController.swift in Sources */,
@@ -232,6 +243,7 @@
 				D8FB022E1E814D6700825809 /* LargeCategoryCell.swift in Sources */,
 				D841CA6D1E7DB469007708F8 /* App.swift in Sources */,
 				D841CA5E1E7D90A1007708F8 /* CategoryCell.swift in Sources */,
+				D8C7DDEA1E817B5100061329 /* ScreenshotImageCell.swift in Sources */,
 				D841CA6B1E7DB44B007708F8 /* Category.swift in Sources */,
 				D8FB02301E81558D00825809 /* LargeAppCell.swift in Sources */,
 				D8FB023C1E8168FF00825809 /* AppDetailHeader.swift in Sources */,
