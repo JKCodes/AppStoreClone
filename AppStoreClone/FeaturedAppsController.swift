@@ -22,7 +22,7 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationItem.title = "Featured Apps"
+        navigationItem.title = "Featured"
         
         Category.fetchFeaturedApps { [weak self] (featuredApps) in
             guard let this = self else {
@@ -42,15 +42,25 @@ class FeaturedAppsController: UICollectionViewController, UICollectionViewDelega
         collectionView?.register(Header.self, forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: headerId)
     }
     
+    func showAppDetail(for app: App) {
+        let layout = UICollectionViewFlowLayout()
+        let appDetailController = AppDetailController(collectionViewLayout: layout)
+        appDetailController.app = app
+        
+        navigationController?.pushViewController(appDetailController, animated: true)
+    }
+    
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.item == 2 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: largeCellId, for: indexPath) as! LargeCategoryCell
             cell.category = categories?[indexPath.item]
+            cell.featuredAppsController = self
             return cell
         } else {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
             cell.category = categories?[indexPath.item]
+            cell.featuredAppsController = self
             return cell
         }
     }

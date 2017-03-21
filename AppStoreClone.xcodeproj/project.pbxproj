@@ -22,6 +22,8 @@
 		D8FB02321E815BF100825809 /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB02311E815BF100825809 /* Header.swift */; };
 		D8FB02341E815DC200825809 /* BannerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB02331E815DC200825809 /* BannerCell.swift */; };
 		D8FB02361E81605A00825809 /* FeaturedApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB02351E81605A00825809 /* FeaturedApps.swift */; };
+		D8FB02381E8167B100825809 /* AppDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB02371E8167B100825809 /* AppDetailController.swift */; };
+		D8FB023C1E8168FF00825809 /* AppDetailHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8FB023B1E8168FF00825809 /* AppDetailHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,8 @@
 		D8FB02311E815BF100825809 /* Header.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
 		D8FB02331E815DC200825809 /* BannerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BannerCell.swift; sourceTree = "<group>"; };
 		D8FB02351E81605A00825809 /* FeaturedApps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeaturedApps.swift; sourceTree = "<group>"; };
+		D8FB02371E8167B100825809 /* AppDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailController.swift; sourceTree = "<group>"; };
+		D8FB023B1E8168FF00825809 /* AppDetailHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDetailHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				D841CA4D1E7D8E4C007708F8 /* FeaturedAppsController.swift */,
+				D8FB02371E8167B100825809 /* AppDetailController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -97,13 +102,8 @@
 		D841CA631E7D917D007708F8 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D841CA681E7DA5E2007708F8 /* AppCell.swift */,
-				D841CA5F1E7D90DA007708F8 /* BaseCell.swift */,
-				D841CA5D1E7D90A1007708F8 /* CategoryCell.swift */,
-				D8FB022F1E81558D00825809 /* LargeAppCell.swift */,
-				D8FB022D1E814D6700825809 /* LargeCategoryCell.swift */,
-				D8FB02311E815BF100825809 /* Header.swift */,
-				D8FB02331E815DC200825809 /* BannerCell.swift */,
+				D8FB023A1E8168E700825809 /* App Detail */,
+				D8FB02391E8168D300825809 /* Featured */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -124,6 +124,28 @@
 				D841CA661E7D9BD7007708F8 /* UIView + Anchors.swift */,
 			);
 			name = "Protocols and Extensions";
+			sourceTree = "<group>";
+		};
+		D8FB02391E8168D300825809 /* Featured */ = {
+			isa = PBXGroup;
+			children = (
+				D841CA681E7DA5E2007708F8 /* AppCell.swift */,
+				D841CA5F1E7D90DA007708F8 /* BaseCell.swift */,
+				D841CA5D1E7D90A1007708F8 /* CategoryCell.swift */,
+				D8FB022F1E81558D00825809 /* LargeAppCell.swift */,
+				D8FB022D1E814D6700825809 /* LargeCategoryCell.swift */,
+				D8FB02311E815BF100825809 /* Header.swift */,
+				D8FB02331E815DC200825809 /* BannerCell.swift */,
+			);
+			name = Featured;
+			sourceTree = "<group>";
+		};
+		D8FB023A1E8168E700825809 /* App Detail */ = {
+			isa = PBXGroup;
+			children = (
+				D8FB023B1E8168FF00825809 /* AppDetailHeader.swift */,
+			);
+			name = "App Detail";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8FB02381E8167B100825809 /* AppDetailController.swift in Sources */,
 				D841CA671E7D9BD8007708F8 /* UIView + Anchors.swift in Sources */,
 				D841CA601E7D90DA007708F8 /* BaseCell.swift in Sources */,
 				D841CA4E1E7D8E4C007708F8 /* FeaturedAppsController.swift in Sources */,
@@ -211,6 +234,7 @@
 				D841CA5E1E7D90A1007708F8 /* CategoryCell.swift in Sources */,
 				D841CA6B1E7DB44B007708F8 /* Category.swift in Sources */,
 				D8FB02301E81558D00825809 /* LargeAppCell.swift in Sources */,
+				D8FB023C1E8168FF00825809 /* AppDetailHeader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

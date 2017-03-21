@@ -17,6 +17,8 @@ class CategoryCell: BaseCell, UICollectionViewDelegate, UICollectionViewDataSour
     private let cellWidth: CGFloat = 100.0
     private var cellHeight: CGFloat = 0.0
     
+    weak var featuredAppsController = FeaturedAppsController()
+    
     var category: Category? {
         didSet {
             if let name = category?.name {
@@ -82,6 +84,12 @@ class CategoryCell: BaseCell, UICollectionViewDelegate, UICollectionViewDataSour
     
     func setupDividerView() {
         dividerLineView.anchor(top: nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: contentOffset, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: dividerHeight)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let app = category?.apps?[indexPath.item] {
+            featuredAppsController?.showAppDetail(for: app)
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
